@@ -8,7 +8,7 @@
   <title>TestTable</title>
 </head>
 
-<body class="body">
+<body>
   <header class="header">
     <div class="header__logo">
       <img src="./img/logo.png" alt="Лого" width="250" height="42">
@@ -24,7 +24,7 @@
     </div>
   </header>
   <main class="main">
-    <nav class="main__nav main__nav--close">
+    <nav class="main__nav">
       <ul class="nav__list">
         <li class="nav__item">
           <a href="" class="nav__link">
@@ -75,7 +75,7 @@
           </a>
         </li>
         <li class="nav__item">
-          <a href="./location.html" class="nav__link">
+          <a href="" class="nav__link">
             <span class="link__svg">
               <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -112,25 +112,29 @@
         <span class="button__text">Скрыть меню</span>
       </button>
     </nav>
-    <section class="main__workspace">
+    <section class="main__workspace workspace__location">
+      <h1>Локации</h1>
+      <div class="location__wrap-nav">
+        <nav class="location__nav">
+          <ul class="location__list">
+            <li class="location__item"><a href="" class="location__link">Все локации</a></li>
+            <li class="location__item"><a href="" class="location__link">Импорт/Экспорт</a></li>
+            <li class="location__item"><a href="" class="location__link">Настройки</a></li>
+          </ul>
+        </nav>
+        <button>Создать локацию</button>
+      </div>
+      <div>
+        <button class="workspace__upgrade">Cинхронизация<span>(17.05.2024 15:23:21)</span></button>
+        <form action="">
+          <input type="checkbox" name="checkboxSearch">
+          <label for="checkboxSearch">Поиск по точному вхождению</label>
+          <input type="text" placeholder="поиск">
+        </form>
+      </div>
     </section>
   </main>
-  <footer class="footer">
-    <div class="footer__info">
-      <p>Последний приём <span>20.09.2021 18:36:21</span></p>
-      <p>Последняя передача <span>20.09.2021 18:38:21</span></p>
-    </div>
-    <div class="footer__documentation">
-      <a href="">
-        <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M16.0556 19H0.944444C0.693962 19 0.453739 18.8999 0.276621 18.7218C0.0995036 18.5436 0 18.302 0 18.05V0.95C0 0.698044 0.0995036 0.456408 0.276621 0.278249C0.453739 0.100089 0.693962 0 0.944444 0H16.0556C16.306 0 16.5463 0.100089 16.7234 0.278249C16.9005 0.456408 17 0.698044 17 0.95V18.05C17 18.302 16.9005 18.5436 16.7234 18.7218C16.5463 18.8999 16.306 19 16.0556 19ZM3.77778 3.8V7.6H7.55556V3.8H3.77778ZM3.77778 9.5V11.4H13.2222V9.5H3.77778ZM3.77778 13.3V15.2H13.2222V13.3H3.77778ZM9.44444 4.75V6.65H13.2222V4.75H9.44444Z"
-            fill="#FF6600" />
-        </svg>
-        <span>Документация</span>
-      </a>
-    </div>
-  </footer>
+  <footer></footer>
   <script src="./side-menu.js" type="text/javascript"></script>
 </body>
 
