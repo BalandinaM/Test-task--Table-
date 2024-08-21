@@ -116,11 +116,11 @@
       <h1>Локации</h1>
       <div class="location__header">
         <div class="location__wrap-nav">
-          <nav class="location__nav">
-            <ul class="location__list">
-              <li class="location__item"><a href="" class="location__link">Все локации</a></li>
-              <li class="location__item"><a href="" class="location__link">Импорт/Экспорт</a></li>
-              <li class="location__item"><a href="" class="location__link">Настройки</a></li>
+          <nav class="location__navigate">
+            <ul class="navigate__list">
+              <li class="navigate__item"><a href="" class="navigate__link">Все локации</a></li>
+              <li class="navigate__item"><a href="" class="navigate__link">Импорт/Экспорт</a></li>
+              <li class="navigate__item"><a href="" class="navigate__link">Настройки</a></li>
             </ul>
           </nav>
           <button>Создать локацию</button>
@@ -134,141 +134,68 @@
           </form>
         </div>
       </div>
-      <div>
-        <div class="table">
-          <div class="table__row table__level1">
-            <button class="level1__button table__button"></button>
-            <p class="table__titleRow">Локация 1</p>
-            <p class="table__numericData">512</p>
-            <div class="table__editionTools table__editionTools--hidden">
+
+      <ul class="location__list">
+        <li class="location__item">
+          <div class="item__level1 item__row">
+            <button class="level1__button item__button"></button>
+            <p class="item__titleRow">Локация 1</p>
+            <p class="item__numericData">512</p>
+            <div class="item__editionTools item__editionTools--hidden">
               <button class="editionTools__button editionTools__button--edition">Редактировать</button>
               <button class="editionTools__button editionTools__button--delete">Удалить</button>
             </div>
           </div>
-          <div class="table__row table__level2 table__row--hidden">
-            <button class="level2__button table__button"></button>
-            <p class="table__titleRow">Подотдел 1</p>
-            <p class="table__numericData">10</p>
-            <p class="table__addInfo">Для утерь</p>
-          </div>
-          <div class="table__row table__level3 table__row--hidden">
-            <p class="table__titleRow">Подподотдел 1</p>
-            <p class="table__numericData">2</p>
-            <p class="table__addInfo">Виртуальная</p>
-            <p class="table__addInfo table__addInfo--strong">Без штрихкода</p>
-          </div>
-          <div class="table__row table__level3 table__row--hidden">
-            <p class="table__titleRow">Подподотдел 2</p>
-            <p class="table__numericData">48</p>
-            <p class="table__addInfo">Htfkmyf</p>
-            <p class="table__addInfo table__addInfo--strong">штрихкод</p>
-          </div>
-          <div class="table__row table__level2 table__row--hidden">
-            <button class="level2__button table__button"></button>
-            <p class="table__titleRow">Подотдел 2</p>
-            <p class="table__numericData">10</p>
-            <p class="table__addInfo">Для утерь</p>
-          </div>
-          <div class="table__row table__level2 table__row--hidden">
-            <button class="level2__button table__button"></button>
-            <p class="table__titleRow">Подотдел 3</p>
-            <p class="table__numericData">10</p>
-            <p class="table__addInfo">Для утерь</p>
-          </div>
-        </div>
-
-
-        <!-- <table class="table__level1">
-          <tr class="level1">
-            <td>
-              <button class="level1__button">Кнопка</button>
-            </td>
-            <td>Локация 1</td>
-            <td>512</td>
-            <td>Редактировать</td>
-            <td>Удалить</td>
-          </tr>
-          <tr class="table__level2 table__level2--hidden">
-            <td>
-              ----
-            </td>
-            <td>
-              <button class="level2__button">Кнопка</button>
-            </td>
-            <td>Подотдел 1</td>
-            <td>10</td>
-            <td>Для утерь</td>
-          </tr>
-          <tr class="table__level3 table__level3--hidden">
-            <td>
-              ----
-            </td>
-            <td>Подподотдел 1</td>
-            <td>2</td>
-            <td>Виртуальная</td>
-            <td>Без штрихкода</td>
-          </tr>
-          <tr class="table__level2 table__level2--hidden">
-            <table>
-              <tr>
-                <td>
-                  <button class="level2__button">Кнопка</button>
-                </td>
-                <td>
-
-                </td>
-                <td>Подотдел 2</td>
-                <td>10</td>
-                <td>Для утерь</td>
-              </tr>
-              <tr class="table__level3 table__level3--hidden">
-                <table>
-                  <tr>
-                    <td>
-
-                    </td>
-                    <td>Подподотдел 1</td>
-                    <td>587</td>
-                    <td>В реале</td>
-                    <td>Штрихкод обязателен</td>
-                  </tr>
-                </table>
-              </tr>
-            </table>
-          </tr>
-          <tr class="table__level2 table__level2--hidden">
-            <table>
-              <tr>
-                <td>
-                  <button class="level2__button">Кнопка</button>
-                </td>
-                <td>
-
-                </td>
-                <td>Подотдел 3</td>
-                <td>10</td>
-                <td>Для утерь</td>
-              </tr>
-              <tr class="table__level3 table__level3--hidden">
-                <table>
-                  <tr>
-                    <td>
-
-                    </td>
-                    <td>Подподотдел 1</td>
-                    <td>587</td>
-                    <td>В реале</td>
-                    <td>Штрихкод обязателен</td>
-                  </tr>
-                </table>
-              </tr>
-            </table>
-          </tr>
-        </table> -->
-
-
-
-      </div>
+          <ul>
+            <li class="item__level2 item__row item__row--hidden">
+              <button class="level2__button item__button"></button>
+              <p class="item__titleRow">Подотдел 1</p>
+              <p class="item__numericData">10</p>
+              <p class="item__addInfo">Для утерь</p>
+            </li>
+            <li class="">
+              <ul>
+                <li class="item__level3 item__row item__row--hidden">
+                  <p class="item__titleRow">Подподотдел 1</p>
+                  <p class="item__numericData">2</p>
+                  <p class="item__addInfo">Виртуальная</p>
+                  <p class="item__addInfo item__addInfo--strong">Без штрихкода</p>
+                </li>
+                <li class="item__level3 item__row item__row--hidden">
+                  <p class="item__titleRow">Подподотдел 2</p>
+                  <p class="item__numericData">48</p>
+                  <p class="item__addInfo">Htfkmyf</p>
+                  <p class="item__addInfo item__addInfo--strong">штрихкод</p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul>
+            <li class="item__level2 item__row item__row--hidden">
+              <button class="level2__button item__button"></button>
+              <p class="item__titleRow">Подотдел 2</p>
+              <p class="item__numericData">10</p>
+              <p class="item__addInfo">Для утерь</p>
+            </li>
+            <li class="">
+              <ul>
+                <li class="item__level3 item__row item__row--hidden">
+                  <p class="item__titleRow">Подподотдел 2_1</p>
+                  <p class="item__numericData">2</p>
+                  <p class="item__addInfo">Виртуальная</p>
+                  <p class="item__addInfo item__addInfo--strong">Без штрихкода</p>
+                </li>
+                <li class="item__level3 item__row item__row--hidden">
+                  <p class="item__titleRow">Подподотдел 2_2</p>
+                  <p class="item__numericData">48</p>
+                  <p class="item__addInfo">Htfkmyf</p>
+                  <p class="item__addInfo item__addInfo--strong">штрихкод</p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </section>
   </main>
   <footer></footer>

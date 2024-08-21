@@ -237,60 +237,31 @@ a {
   margin-bottom: 50px;
 }
 
-
-
-.table__level1 {
-  border: 2px solid red;
-  border-collapse: collapse;
-}
-
-.level1 {
-  border: 2px solid black;
-  display: flex;
-}
-
-.table__level2,
-.table__level3 {
-  margin-left: 20px;
-  /* display: flex; */
-  border: 2px solid blue;
-  border-collapse: collapse;
-}
-
-.table__level3 {
-  margin-left: 40px;
-}
-
-/* .table__level2--hidden,
-.table__level3--hidden {
-  display: none;
-} */
-
-.table {
+.location__list {
   display: flex;
   flex-direction: column;
 }
 
-.table__row {
+.item__row {
   display: flex;
   align-items: center;
   gap: 30px;
   margin-bottom: 20px;
 }
 
-.table__row--hidden {
+.item__row--hidden {
   display: none;
 }
 
-.table__level2 {
-  margin-left: 45px;
+.item__level2 {
+  margin-left: 35px;
 }
 
-.table__level3 {
-  margin-left: 120px;
+.item__level3 {
+  margin-left: 115px;
 }
 
-.table__button {
+.item__button {
   width: 30px;
   height: 30px;
   border: none;
@@ -300,11 +271,11 @@ a {
   background-position: center;
 }
 
-.table__button--collapsList {
+.item__button--collapsList {
   background-image: url('./img/collapsList.svg');
 }
 
-.table__titleRow {
+.item__titleRow {
   font-family: var(--font-family);
   font-weight: 900;
   font-size: 15px;
@@ -316,7 +287,7 @@ a {
   margin-left: -15px;
 }
 
-.table__titleRow::before {
+.item__titleRow::before {
   content: '';
   position: absolute;
   top: 0;
@@ -328,27 +299,27 @@ a {
   background-position: center;
 }
 
-.table__level2 .table__titleRow {
+.item__level2 .item__titleRow {
   font-weight: 600;
 }
 
-.table__level3 .table__titleRow {
+.item__level3 .item__titleRow {
   font-weight: 500;
 }
 
-.table__numericData {
+.item__numericData {
   font-family: var(--second-family);
   font-weight: 400;
   font-size: 14px;
   color: var(--orange);
 }
 
-.table__editionTools {
+.item__editionTools {
   display: flex;
   gap: 30px;
 }
 
-.table__editionTools--hidden {
+.item__editionTools--hidden {
   display: none;
 }
 

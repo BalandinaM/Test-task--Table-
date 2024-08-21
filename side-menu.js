@@ -11,41 +11,47 @@ buttonNavMenu.addEventListener('click', () => {
 
 ////////////////////////////////////////////////////////
 
-const buttonFirstLevelTable = document.querySelector('.level1__button');
-const buttonsSecondLevelTable = document.querySelectorAll('.level2__button');
-const tablesSecondLevel = document.querySelectorAll('.table__level2');
-const tablesThirdLevel = document.querySelectorAll('.table__level3');
-const tableEditionTools = document.querySelector('.table__editionTools');
+const buttonFirstLevel = document.querySelector('.level1__button');
+const buttonsSecondLevel = document.querySelectorAll('.level2__button');
+const rowsSecondLevel = document.querySelectorAll('.item__level2');
+const rowsThirdLevel = document.querySelectorAll('.item__level3');
+const editionTools = document.querySelector('.item__editionTools');
 
-console.log(tablesSecondLevel);
 
-buttonFirstLevelTable.addEventListener('click', () => {
+buttonFirstLevel.addEventListener("click", () => {
+  editionTools.classList.toggle("item__editionTools--hidden");
+  buttonFirstLevel.classList.toggle("item__button--collapsList"); //сменить картинку кнопки 1го уровня
 
-  tableEditionTools.classList.toggle('table__editionTools--hidden');
-
-  for (let elem of tablesSecondLevel) {//убрать класс с низлежащих уровней
-    elem.classList.toggle('table__row--hidden')
+  for (let elem of rowsSecondLevel) {
+    //убрать класс с низлежащих уровней
+    elem.classList.toggle("item__row--hidden");
   }
-  buttonFirstLevelTable.classList.toggle('table__button--collapsList');//сменить картинку кнопки 1го уровня
 
-  if (!tableThirdLevel.classList.contains('table__row--hidden')) {//при сворачивании всего первого уровня, свернуть и самый глубокий
-    tableThirdLevel.classList.add('table__row--hidden');
-
-    for (elem of buttonsSecondLevelTable) {
-      elem.classList.toggle('table__button--collapsList');//и поменять картинку на кнопке второго уровня
+  for (let elem of rowsThirdLevel) {
+    if (!elem.classList.contains("item__row--hidden")) {
+      //при сворачивании всего первого уровня, свернуть и самый глубокий
+      elem.classList.add("item__row--hidden");
     }
   }
-})
 
-for (let elem of buttonsSecondLevelTable) {
+  for (elem of buttonsSecondLevel) {
+    if (elem.classList.contains('item__button--collapsList'))
+    elem.classList.remove("item__button--collapsList"); //и поменять картинку на кнопке второго уровня
+  }
+});
+
+for (let elem of buttonsSecondLevel) {
   elem.addEventListener('click', () => {
-    for (let elem of tablesThirdLevel) {
-      elem.classList.toggle('table__row--hidden');
+    for (let elem of rowsThirdLevel) {
+      elem.classList.toggle('item__row--hidden');
     }
-    elem.classList.toggle('table__button--collapsList');
+    elem.classList.toggle('item__button--collapsList');
   });
 }
 
+const childrenLocationItem = document.querySelector('.location__item').children;
+console.log(childrenLocationItem);
+console.log(childrenLocationItem.children);
 
 
 const dataBase = [
@@ -93,4 +99,4 @@ const dataBase = [
   }),
 ];
 
-console.log(dataBase);
+//console.log(dataBase);
