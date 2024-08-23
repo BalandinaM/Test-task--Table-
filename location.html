@@ -8,7 +8,7 @@
   <title>TestTable</title>
 </head>
 
-<body>
+<body class="body">
   <header class="header">
     <div class="header__logo">
       <img src="./img/logo.png" alt="Лого" width="250" height="42">
@@ -113,20 +113,20 @@
       </button>
     </nav>
     <section class="main__workspace workspace__location">
-      <h1>Локации</h1>
+      <h1 class="location__title">Локации</h1>
       <div class="location__header">
         <div class="location__wrap-nav">
           <nav class="location__navigate">
             <ul class="navigate__list">
-              <li class="navigate__item"><a href="" class="navigate__link">Все локации</a></li>
+              <li class="navigate__item"><a href="" class="navigate__link navigate__link--current">Все локации</a></li>
               <li class="navigate__item"><a href="" class="navigate__link">Импорт/Экспорт</a></li>
               <li class="navigate__item"><a href="" class="navigate__link">Настройки</a></li>
             </ul>
           </nav>
-          <button>Создать локацию</button>
+          <button class="location__button" type="button">Создать локацию</button>
         </div>
-        <div>
-          <button class="workspace__upgrade">Cинхронизация<span>(17.05.2024 15:23:21)</span></button>
+        <div class="workspace__tools">
+          <button class="workspace__upgrade">Cинхронизация<span> (17.05.2024 15:23:21)</span></button>
           <form action="">
             <input type="checkbox" name="checkboxSearch">
             <label for="checkboxSearch">Поиск по точному вхождению</label>
