@@ -327,10 +327,11 @@ a {
   text-align: center;
 }
 
-
-
-
 /* таблица */
+
+.location__item {
+  margin-bottom: 20px;
+}
 
 .location__list {
   display: flex;
@@ -340,7 +341,8 @@ a {
 .item__row {
   display: flex;
   align-items: center;
-  gap: 30px;
+  column-gap: 30px;
+  row-gap: 10px;
   margin-bottom: 20px;
 }
 
@@ -349,11 +351,17 @@ a {
 }
 
 .item__level2 {
+  flex-wrap: wrap;
   margin-left: 35px;
+  margin-bottom: 0;
+}
+
+.item__level2 div {
+  width: 100%;
 }
 
 .item__level3 {
-  margin-left: 115px;
+  margin-left: 78px;
 }
 
 .item__button {
