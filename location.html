@@ -127,8 +127,8 @@
         </div>
         <div class="workspace__tools">
           <button class="workspace__upgrade">Cинхронизация<span> (17.05.2024 15:23:21)</span></button>
-          <form action="">
-            <input type="checkbox" name="checkboxSearch">
+          <form  class="workspace__search" action="" method="get">
+            <input type="checkbox" name="checkboxSearch" checked>
             <label for="checkboxSearch">Поиск по точному вхождению</label>
             <input type="text" placeholder="поиск">
           </form>
@@ -138,6 +138,34 @@
       <ul class="location__list">
         <!-- строки таблицы -->
       </ul>
+
+      <form class="form-createLocation" action="" method="post">
+        <h3 class="form-createLocation__title">Создать локацию</h3>
+        <div class="form-createLocation__bodyOfForm">
+          <input class="form-createLocation__input" type="text" placeholder="Название">
+          <input class="form-createLocation__input" type="text" placeholder="Штрихкод">
+          <input class="form-createLocation__input" type="text" placeholder="RFID">
+          <select class="form-createLocation__input" name="location" id="form-location-select">
+            <option value="">-- Вложенность --</option>
+            <option value="location_1">Локация 1</option>
+            <option value="location_2">Локация 2</option>
+            <option value="location_3">Локация 3</option>
+            <option value="location_4">Локация 4</option>
+          </select>
+          <div class="form-createLocation__wrap-checkbox">
+            <label for="virtualLocation">Виртуальная локация</label>
+            <input type="checkbox" name="virtualLocation" checked>
+          </div>
+          <div class="form-createLocation__wrap-checkbox">
+            <label for="lossesLocation">Локация для утерь</label>
+            <input type="checkbox" name="lossesLocation" checked>
+          </div>
+          <div class="form-createLocation__wrap-buttons">
+            <button class="form-createLocation__buttonCreate">Создать</button>
+            <button class="form-createLocation__buttonReset">Отменить</button>
+          </div>
+        </div>
+      </form>
 
     </section>
   </main>
