@@ -153,16 +153,16 @@
             <option value="location_4">Локация 4</option>
           </select>
           <div class="form-createLocation__wrap-checkbox">
-            <label for="virtualLocation">Виртуальная локация</label>
-            <input type="checkbox" name="virtualLocation" checked>
+            <input class="form-createLocation__checkbox visually-hidden" type="checkbox" name="virtualLocation" id="virtualLocation">
+            <label class="form-createLocation__label-checkbox" for="virtualLocation">Виртуальная локация</label>
           </div>
           <div class="form-createLocation__wrap-checkbox">
-            <label for="lossesLocation">Локация для утерь</label>
-            <input type="checkbox" name="lossesLocation" checked>
+            <input class="form-createLocation__checkbox visually-hidden" type="checkbox" name="lossesLocation" id="lossesLocation">
+            <label class="form-createLocation__label-checkbox" for="lossesLocation">Локация для утерь</label>
           </div>
           <div class="form-createLocation__wrap-buttons">
-            <button class="form-createLocation__buttonCreate">Создать</button>
-            <button class="form-createLocation__buttonReset">Отменить</button>
+            <button class="form-createLocation__buttonCreate" type="submit">Создать</button>
+            <button class="form-createLocation__buttonReset" type="reset">Отменить</button>
           </div>
         </div>
       </form>

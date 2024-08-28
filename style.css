@@ -640,3 +640,40 @@ a {
   background: var(--white);
   color: var(--black);
 }
+
+.form-createLocation__label-checkbox {
+  position: relative;
+  width: 100%;
+}
+
+.form-createLocation__label-checkbox::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-color:rgb(231, 208, 193);
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  right: 25px;
+}
+
+.form-createLocation__label-checkbox::before {
+  content: "";
+  width: 52px;
+  height: 28px;
+  box-sizing: border-box;
+  background-color: var(--light-grey);
+  border-radius: 53px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.form-createLocation__checkbox:checked + .form-createLocation__label-checkbox::after {
+  transform: translateX(22px);
+  background-color: var(--orange);
+}
+
+.form-createLocation__checkbox:checked + .form-createLocation__label-checkbox::before {
+  background-color: rgb(233, 233, 233);
+}
