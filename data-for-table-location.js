@@ -297,7 +297,7 @@ const createRowTable = (elem) => {
     .querySelector(".item__numericData").textContent = elem.info1;
   for (let elemObj in elem) {
     //перебираем элементы в объекте 1 уровень вложенности
-    console.log(elem.title);
+    //console.log(elem.title);
     //console.log(elem.info1);
     //console.log(elem[elemObj]);
     //console.log(typeof(elem[elemObj]));
@@ -309,7 +309,7 @@ const createRowTable = (elem) => {
     //   .querySelector(".item__numericData").textContent = elem.info1;
     if (typeof elem[elemObj] == "object") {
       // если элемент объекта является объектом 2 уровень вложенности
-      console.log(elem[elemObj])
+      //console.log(elem[elemObj])
       let obj = elem[elemObj]; //для удобства использования запишем элемент являющийся объектом в переменную
       //console.log(obj.title)
       for (let elem in obj) {

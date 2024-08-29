@@ -139,70 +139,6 @@
         <!-- строки таблицы -->
       </ul>
 
-      <form class="form-createLocation form-editionLocations" action="" method="post">
-        <h3 class="form-editionLocations__title">Создать локацию</h3>
-        <div class="form-editionLocations__bodyOfForm">
-          <input class="form-editionLocations__input" type="text" placeholder="Название">
-          <input class="form-editionLocations__input" type="text" placeholder="Штрихкод">
-          <input class="form-editionLocations__input" type="text" placeholder="RFID">
-          <select class="form-editionLocations__input" name="location" id="form-location-select">
-            <option value="">-- Вложенность --</option>
-            <option value="location_1">Локация 1</option>
-            <option value="location_2">Локация 2</option>
-            <option value="location_3">Локация 3</option>
-            <option value="location_4">Локация 4</option>
-          </select>
-          <div class="form-editionLocations__wrap-checkbox">
-            <input class="form-editionLocations__checkbox visually-hidden" type="checkbox" name="virtualLocation" id="virtualLocation">
-            <label class="form-editionLocations__label-checkbox" for="virtualLocation">Виртуальная локация</label>
-          </div>
-          <div class="form-editionLocations__wrap-checkbox">
-            <input class="form-editionLocations__checkbox visually-hidden" type="checkbox" name="lossesLocation" id="lossesLocation">
-            <label class="form-editionLocations__label-checkbox" for="lossesLocation">Локация для утерь</label>
-          </div>
-          <div class="form-editionLocations__wrap-buttons">
-            <button class="form-editionLocations__button form-createLocation__buttonCreate" type="submit">Создать</button>
-            <button class="form-editionLocations__button form-createLocation__buttonReset" type="reset">Отменить</button>
-          </div>
-        </div>
-      </form>
-
-      <form class="form-changeLocation form-editionLocations" action="" method="post">
-        <h3 class="form-editionLocations__title">Изменить локацию <span>%название%</span></h3>
-        <div class="form-editionLocations__bodyOfForm">
-          <label class="form-changeLocation__label-input">Название
-            <input class="form-editionLocations__input" type="text" placeholder="Название">
-          </label>
-          <label class="form-changeLocation__label-input">Штрихкод
-            <input class="form-editionLocations__input" type="text" placeholder="Штрихкод">
-          </label>
-          <label class="form-changeLocation__label-input">RFID
-            <input class="form-editionLocations__input" type="text" placeholder="RFID">
-          </label>
-          <label class="form-changeLocation__label-input">Вложенность
-            <select class="form-editionLocations__input" name="location" id="form-location-select">
-              <option value="location_1">Локация 1</option>
-              <option value="location_2">Локация 2</option>
-              <option value="location_3">Локация 3</option>
-              <option value="location_4">Локация 4</option>
-            </select>
-          </label>
-          <div class="form-editionLocations__wrap-checkbox">
-            <input class="form-editionLocations__checkbox visually-hidden" type="checkbox" name="virtualLocation" id="virtualLocation2">
-            <label class="form-editionLocations__label-checkbox" for="virtualLocation2">Виртуальная локация</label>
-          </div>
-          <div class="form-editionLocations__wrap-checkbox">
-            <input class="form-editionLocations__checkbox visually-hidden" type="checkbox" name="lossesLocation" id="lossesLocation2">
-            <label class="form-editionLocations__label-checkbox" for="lossesLocation2">Локация для утерь</label>
-          </div>
-          <div class="form-editionLocations__wrap-buttons">
-            <button class="form-editionLocations__button form-changeLocation__buttonDelete" type="button">Удалить</button>
-            <button class="form-editionLocations__button form-changeLocation__buttonReset" type="reset">Отменить</button>
-            <button class="form-editionLocations__button form-changeLocation__buttonSave" type="submit">Сохранить</button>
-          </div>
-        </div>
-      </form>
-
     </section>
   </main>
   <footer></footer>
@@ -248,8 +184,86 @@
     </li>
   </template>
 
+  <!-- Форма создание локации -->
+
+  <template id="createLocation">
+    <div class="wrap-formEditionLocations">
+      <form class="form-createLocation form-editionLocations" action="" method="post">
+        <h3 class="form-editionLocations__title">Создать локацию</h3>
+        <div class="form-editionLocations__bodyOfForm">
+          <input class="form-editionLocations__input" type="text" placeholder="Название">
+          <input class="form-editionLocations__input" type="text" placeholder="Штрихкод">
+          <input class="form-editionLocations__input" type="text" placeholder="RFID">
+          <select class="form-editionLocations__input" name="location" id="form-location-select">
+            <option value="">-- Вложенность --</option>
+            <option value="location_1">Локация 1</option>
+            <option value="location_2">Локация 2</option>
+            <option value="location_3">Локация 3</option>
+            <option value="location_4">Локация 4</option>
+          </select>
+          <div class="form-editionLocations__wrap-checkbox">
+            <input class="form-editionLocations__checkbox visually-hidden" type="checkbox" name="virtualLocation" id="virtualLocation">
+            <label class="form-editionLocations__label-checkbox" for="virtualLocation">Виртуальная локация</label>
+          </div>
+          <div class="form-editionLocations__wrap-checkbox">
+            <input class="form-editionLocations__checkbox visually-hidden" type="checkbox" name="lossesLocation" id="lossesLocation">
+            <label class="form-editionLocations__label-checkbox" for="lossesLocation">Локация для утерь</label>
+          </div>
+          <div class="form-editionLocations__wrap-buttons">
+            <button class="form-editionLocations__button form-createLocation__buttonCreate" type="submit">Создать</button>
+            <button class="form-editionLocations__button form-createLocation__buttonReset" type="reset">Отменить</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </template>
+
+  <!-- Форма редактирования локации -->
+
+  <template id="changeLocation">
+    <div class="wrap-formEditionLocations">
+      <form class="form-changeLocation form-editionLocations" action="" method="post">
+        <h3 class="form-editionLocations__title">Изменить локацию <span>%название%</span></h3>
+        <div class="form-editionLocations__bodyOfForm">
+          <label class="form-changeLocation__label-input">Название
+            <input class="form-editionLocations__input" type="text" placeholder="Название">
+          </label>
+          <label class="form-changeLocation__label-input">Штрихкод
+            <input class="form-editionLocations__input" type="text" placeholder="Штрихкод">
+          </label>
+          <label class="form-changeLocation__label-input">RFID
+            <input class="form-editionLocations__input" type="text" placeholder="RFID">
+          </label>
+          <label class="form-changeLocation__label-input">Вложенность
+            <select class="form-editionLocations__input" name="location" id="form-location-select">
+              <option value="location_1">Локация 1</option>
+              <option value="location_2">Локация 2</option>
+              <option value="location_3">Локация 3</option>
+              <option value="location_4">Локация 4</option>
+            </select>
+          </label>
+          <div class="form-editionLocations__wrap-checkbox">
+            <input class="form-editionLocations__checkbox visually-hidden" type="checkbox" name="virtualLocation" id="virtualLocation2">
+            <label class="form-editionLocations__label-checkbox" for="virtualLocation2">Виртуальная локация</label>
+          </div>
+          <div class="form-editionLocations__wrap-checkbox">
+            <input class="form-editionLocations__checkbox visually-hidden" type="checkbox" name="lossesLocation" id="lossesLocation2">
+            <label class="form-editionLocations__label-checkbox" for="lossesLocation2">Локация для утерь</label>
+          </div>
+          <div class="form-editionLocations__wrap-buttons">
+            <button class="form-editionLocations__button form-changeLocation__buttonDelete" type="button">Удалить</button>
+            <button class="form-editionLocations__button form-changeLocation__buttonReset" type="reset">Отменить</button>
+            <button class="form-editionLocations__button form-changeLocation__buttonSave" type="submit">Сохранить</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </template>
+
   <script src="./data-for-table-location.js" type="text/javascript"></script>
   <script src="./side-menu.js" type="text/javascript"></script>
+  <script src="./open-form.js" type="text/javascript"></script>
+
 
 
 </body>
