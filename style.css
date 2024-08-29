@@ -543,14 +543,15 @@ a {
 
 /* форма создания локации */
 
-.form-createLocation {
+.form-editionLocations {
   padding: 25px 15px;
   width: 440px;
-  height: 504px;
+  height: auto;
   background: var(--white);
+  margin-bottom: 30px;
 }
 
-.form-createLocation__title {
+.form-editionLocations__title {
   margin-bottom: 17px;
 
   font-family: var(--font-family);
@@ -561,14 +562,27 @@ a {
   color: #000;
 }
 
-.form-createLocation__bodyOfForm {
+.form-editionLocations__bodyOfForm {
   display: flex;
   flex-direction: column;
   gap: 17px;
   align-items: center;
 }
 
-.form-createLocation__input {
+/* .form-changeLocation .form-editionLocations__bodyOfForm {
+  gap: 38px;
+} */
+
+.form-changeLocation__label-input {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 112%;
+  color: var(--black);
+  width: 360px;
+}
+
+.form-editionLocations__input {
   border: 1px solid #e1e1e1;
   border-radius: 5px;
   width: 360px;
@@ -583,13 +597,18 @@ a {
   color: var(--black);
 }
 
-.form-createLocation__input:active,
-.form-createLocation__input:focus {
+.form-changeLocation .form-editionLocations__input {
+  margin-top: 3px;
+}
+
+.form-editionLocations__input:hover,
+.form-editionLocations__input:focus,
+.form-editionLocations__input:active {
   outline: none;
   border: 2px solid var(--orange);
 }
 
-.form-createLocation__input::placeholder {
+.form-editionLocations__input::placeholder {
   font-family: var(--third-family);
   font-weight: 400;
   font-size: 16px;
@@ -597,21 +616,22 @@ a {
   color: var(--grey);
 }
 
-.form-createLocation__wrap-checkbox {
+.form-editionLocations__wrap-checkbox {
   display: flex;
   width: 360px;
   justify-content: space-between;
 
 }
 
-.form-createLocation__wrap-buttons {
+.form-editionLocations__wrap-buttons {
   display: flex;
   width: 360px;
   justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 17px;
 }
 
-.form-createLocation__buttonCreate,
-.form-createLocation__buttonReset {
+.form-editionLocations__button {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 14px;
@@ -621,9 +641,11 @@ a {
 
   border-radius: 5px;
   padding: 10px;
-}
-.form-createLocation__buttonCreate {
   border: none;
+}
+
+.form-createLocation__buttonCreate,
+.form-changeLocation__buttonSave {
   width: 193px;
   height: 50px;
   background: var(--black);
@@ -633,7 +655,9 @@ a {
   background-position: 40px 16px;
 }
 
-.form-createLocation__buttonReset {
+.form-createLocation__buttonReset,
+.form-changeLocation__buttonReset,
+.form-changeLocation__buttonDelete {
   border: 1px solid var(--black);
   width: 151px;
   height: 50px;
@@ -641,12 +665,25 @@ a {
   color: var(--black);
 }
 
-.form-createLocation__label-checkbox {
+.form-changeLocation__buttonDelete {
+  width: 193px;
+  height: 50px;
+  background-image: url(./img/delete.svg);
+  background-repeat: no-repeat;
+  background-position: 43px 18px;
+}
+
+.form-changeLocation__buttonSave {
+  width: 100%;
+  background-position: 115px 16px;
+}
+
+.form-editionLocations__label-checkbox {
   position: relative;
   width: 100%;
 }
 
-.form-createLocation__label-checkbox::after {
+.form-editionLocations__label-checkbox::after {
   content: "";
   width: 24px;
   height: 24px;
@@ -657,7 +694,7 @@ a {
   right: 25px;
 }
 
-.form-createLocation__label-checkbox::before {
+.form-editionLocations__label-checkbox::before {
   content: "";
   width: 52px;
   height: 28px;
@@ -669,11 +706,11 @@ a {
   right: 0;
 }
 
-.form-createLocation__checkbox:checked + .form-createLocation__label-checkbox::after {
+.form-editionLocations__checkbox:checked + .form-editionLocations__label-checkbox::after {
   transform: translateX(22px);
   background-color: var(--orange);
 }
 
-.form-createLocation__checkbox:checked + .form-createLocation__label-checkbox::before {
+.form-editionLocations__checkbox:checked + .form-editionLocations__label-checkbox::before {
   background-color: rgb(233, 233, 233);
 }
