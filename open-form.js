@@ -5,10 +5,10 @@ const formCreateLocation = formCreateLocationTemplate.cloneNode(true);
 
 buttonCreateLocation.addEventListener('click', () => {
   body.append(formCreateLocation);
-  const buttonCreateLocation = formCreateLocation.querySelector('.form-createLocation__buttonCreate');
+  const buttonFormCreateLocation = formCreateLocation.querySelector('.form-createLocation__buttonCreate');
   const buttonResetForm = formCreateLocation.querySelector('.form-createLocation__buttonReset');
 
-  buttonCreateLocation.addEventListener('click', (event) => {
+  buttonFormCreateLocation.addEventListener('click', (event) => {
     event.preventDefault();
     formCreateLocation.remove();
   });
