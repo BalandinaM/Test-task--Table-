@@ -41,75 +41,75 @@ const dataBase = [
       },
     },
   },
-  {
-    title: "Локация 2",
-    info1: "215",
-    location1_1: {
-      title: "Подотдел 1",
-      info1: "10",
-      info2: "Для утерь",
+  // {
+  //   title: "Локация 2",
+  //   info1: "215",
+  //   location1_1: {
+  //     title: "Подотдел 1",
+  //     info1: "10",
+  //     info2: "Для утерь",
 
-      location1_1_1: {
-        title: "Подподотдел 1",
-        info1: "2",
-        info2: "Виртуальная",
-        info3: "Без штрихкода",
-      },
+  //     location1_1_1: {
+  //       title: "Подподотдел 1",
+  //       info1: "2",
+  //       info2: "Виртуальная",
+  //       info3: "Без штрихкода",
+  //     },
 
-      location1_1_2: {
-        title: "Подподотдел 2",
-        info1: "3",
-        info2: "---",
-        info3: "---",
-      },
-    },
-  },
-  {
-    title: "Локация 3",
-    info1: "320",
-    location1_1: {
-      title: "Подотдел 1",
-      info1: "87631",
-      info2: "Для утерь",
+  //     location1_1_2: {
+  //       title: "Подподотдел 2",
+  //       info1: "3",
+  //       info2: "---",
+  //       info3: "---",
+  //     },
+  //   },
+  // },
+  // {
+  //   title: "Локация 3",
+  //   info1: "320",
+  //   location1_1: {
+  //     title: "Подотдел 1",
+  //     info1: "87631",
+  //     info2: "Для утерь",
 
-      location1_1_1: {
-        title: "Подподотдел 1",
-        info1: "2",
-        info2: "Виртуальная",
-        info3: "Без штрихкода",
-      },
+  //     location1_1_1: {
+  //       title: "Подподотдел 1",
+  //       info1: "2",
+  //       info2: "Виртуальная",
+  //       info3: "Без штрихкода",
+  //     },
 
-      location1_1_2: {
-        title: "Подподотдел 2",
-        info1: "3",
-        info2: "---",
-        info3: "---",
-      },
-    },
-  },
-  {
-    title: "Локация 4",
-    info1: "6975",
-    location1_1: {
-      title: "Подотдел 1",
-      info1: "87631",
-      info2: "Для утерь",
+  //     location1_1_2: {
+  //       title: "Подподотдел 2",
+  //       info1: "3",
+  //       info2: "---",
+  //       info3: "---",
+  //     },
+  //   },
+  // },
+  // {
+  //   title: "Локация 4",
+  //   info1: "6975",
+  //   location1_1: {
+  //     title: "Подотдел 1",
+  //     info1: "87631",
+  //     info2: "Для утерь",
 
-      location1_1_1: {
-        title: "Подподотдел 1",
-        info1: "2",
-        info2: "Виртуальная",
-        info3: "Без штрихкода",
-      },
+  //     location1_1_1: {
+  //       title: "Подподотдел 1",
+  //       info1: "2",
+  //       info2: "Виртуальная",
+  //       info3: "Без штрихкода",
+  //     },
 
-      location1_1_2: {
-        title: "Подподотдел 2",
-        info1: "3",
-        info2: "---",
-        info3: "---",
-      },
-    },
-  },
+  //     location1_1_2: {
+  //       title: "Подподотдел 2",
+  //       info1: "3",
+  //       info2: "---",
+  //       info3: "---",
+  //     },
+  //   },
+  // },
 ];
 
 //console.log(dataBase);
@@ -308,21 +308,31 @@ const createRowTable = (elem) => {
     //   .querySelector(".item__level1")
     //   .querySelector(".item__numericData").textContent = elem.info1;
     if (typeof elem[elemObj] == "object") {
+
       // если элемент объекта является объектом 2 уровень вложенности
       //console.log(elem[elemObj])
       let obj = elem[elemObj]; //для удобства использования запишем элемент являющийся объектом в переменную
       //console.log(obj.title)
+      let parentLevel2 = rowTableTemplate.querySelector('.parent-level2');
+
       for (let elem in obj) {
+
+        let level = (function func() {
+          const level2 = rowTableTemplate.querySelector(".item__level2").cloneNode(true);
         //console.log(obj.title);
-        rowTable
-          .querySelector(".item__level2")
+        level2
           .querySelector(".item__titleRow").textContent = obj.title;
-        rowTable
-          .querySelector(".item__level2")
+        level2
           .querySelector(".item__numericData").textContent = obj.info1;
-        rowTable
-          .querySelector(".item__level2")
+        level2
           .querySelector(".item__addInfo").textContent = obj.info2;
+
+        return level2;
+        })();
+
+        //console.log(level);
+        parentLevel2.appendChild(level);
+
         if (typeof obj[elem] == "object") {
           // если элемент объекта является объектом 3 уровень вложенности
           //console.log(obj[elem]);
