@@ -39,6 +39,13 @@ const dataBase = [
         info2: "+++",
         info3: "---",
       },
+
+      location1_2_3: {
+        title: "Подподотдел 3",
+        info1: "54517",
+        info2: "---",
+        info3: "--++++",
+      },
     },
   },
   {
@@ -127,16 +134,6 @@ const levelThirdChildrenTemplate = document.querySelector('#level3_item').conten
 const levelThirdChildren = levelThirdChildrenTemplate.cloneNode(true);
 
 
-
-
-// table.appendChild(levelOne);
-// levelOne.appendChild(levelTwo);
-// levelTwo.appendChild(levelTwoChildren);
-// levelTwoChildren.querySelector('.item__level2').appendChild(levelThird);
-// levelThird.appendChild(levelThirdChildren);
-// levelThird.appendChild(levelThirdChildren1);
-
-
 const createRowTable = (elem) => {
   const levelOneTemplate = document
     .querySelector("#level1")
@@ -152,7 +149,6 @@ const createRowTable = (elem) => {
 
   for (let elemObj in elem) {
     if (typeof elem[elemObj] == "object") {
-      //console.log(elem[elemObj]);
       let obj = elem[elemObj];
 
       const levelTwoTemplate = document
@@ -191,18 +187,7 @@ const createRowTable = (elem) => {
       for (let elem in obj) {
         if (typeof obj[elem] == "object") {
 
-
-
-          //console.log(elem);
           let obj2 = obj[elem];
-
-          //for (let obj2 in obj) {
-
-            //console.log(obj2)
-
-
-
-
 
             const levelThirdChildrenTemplate = document
               .querySelector("#level3_item")
@@ -221,19 +206,7 @@ const createRowTable = (elem) => {
             ).textContent = obj2.info3;
 
             levelThird.appendChild(levelThirdChildren);
-          //}
-
-
-          //arrChildren.push(levelThirdChildren);
         }
-
-        // arrChildren.forEach((elem) => {
-        //   levelThird.appendChild(elem);
-        // })
-        // console.log(arrChildren);
-
-        // levelTwoChildren.querySelector('.item__level2').appendChild(levelThird);
-
       }
     }
   }
