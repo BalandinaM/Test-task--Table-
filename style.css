@@ -190,7 +190,12 @@ a {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 16px;
+}
 
+.nav__link-button {
+  width: 100%;
+  border: none;
+  background: transparent;
 }
 
 .nav__button {
