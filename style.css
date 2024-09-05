@@ -125,6 +125,25 @@ a {
   overflow: hidden;
 }
 
+.buttonAdd {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: var(--white);
+  border: none;
+  padding: 18px 50px;
+  padding-left: 74px;
+  border-radius: 5px;
+  background-color: var(--black);
+  background-image: url('./img/plus.svg');
+  background-repeat: no-repeat;
+  background-position: 50px 20px;
+  cursor: pointer;
+}
+
 .body {
   /* min-width: 1600px;
   width: auto; */
@@ -279,25 +298,6 @@ a {
 .navigate__link--current {
   background-color: var(--black);
   color: var(--white);
-}
-
-.location__button {
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  text-align: center;
-  color: var(--white);
-  border: none;
-  padding: 18px 50px;
-  padding-left: 74px;
-  border-radius: 5px;
-  background-color: var(--black);
-  background-image: url('./img/plus.svg');
-  background-repeat: no-repeat;
-  background-position: 50px 20px;
-  cursor: pointer;
 }
 
 .workspace__tools {
@@ -642,7 +642,8 @@ a {
 
 }
 
-.form-editionLocations__wrap-buttons {
+.form-editionLocations__wrap-buttons,
+.settings__wrap-buttons {
   display: flex;
   width: 360px;
   justify-content: space-between;
@@ -650,7 +651,8 @@ a {
   row-gap: 17px;
 }
 
-.form-editionLocations__button {
+.form-editionLocations__button,
+.settings__button {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 14px;
@@ -664,7 +666,8 @@ a {
 }
 
 .form-createLocation__buttonCreate,
-.form-changeLocation__buttonSave {
+.form-changeLocation__buttonSave,
+.settings__button--create {
   width: 193px;
   height: 50px;
   background: var(--black);
@@ -676,7 +679,8 @@ a {
 
 .form-createLocation__buttonReset,
 .form-changeLocation__buttonReset,
-.form-changeLocation__buttonDelete {
+.form-changeLocation__buttonDelete,
+.settings__button--reset {
   border: 1px solid var(--black);
   width: 151px;
   height: 50px;
@@ -777,11 +781,12 @@ a {
 }
 
 .settingFieldsTable {
-
+margin-bottom: 30px;
 }
 
-.settings__table {
+.settingFieldsTable__table {
   width: 100%;
+  margin-bottom: 30px;
 }
 
 .settings__table tr {
@@ -800,6 +805,11 @@ table, th, td {
   line-height: 130%;
   color: #000;
   text-align: center;
+  height: 60px;
+}
+
+.table__header tr td:nth-child(2) {
+  text-align: left;
 }
 
 .table__body {
@@ -855,7 +865,7 @@ tbody tr:nth-child(odd) {
   padding-left: 45px;
   background-image: url(./img/points.svg);
   background-repeat: no-repeat;
-  background-position: 30px 22px;
+  background-position: 30px 24px;
 }
 
 .row__cell--name span {
@@ -866,4 +876,13 @@ tbody tr:nth-child(odd) {
   background-image: url(./img/fix.svg);
   background-repeat: no-repeat;
   /* background-position: 30px 22px; */
+}
+
+.settings__wrap-buttons {
+  width: 380px;
+  margin-right: 483px;
+}
+
+.settings__button--create {
+  width: 210px;
 }
