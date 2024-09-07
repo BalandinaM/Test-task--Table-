@@ -25,7 +25,8 @@ console.log(buttonsChangeLocation);
 
 
 for (let button of buttonsChangeLocation) {
-  button.addEventListener("click", () => {
+  button.addEventListener("click", (e) => {
+    e.stopPropagation();
     body.append(formChangeLocation);
     const buttonSaveLocation = formChangeLocation.querySelector('.form-changeLocation__buttonSave');
     const buttonResetForm = formChangeLocation.querySelector('.form-changeLocation__buttonReset');

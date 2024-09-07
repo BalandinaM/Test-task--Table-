@@ -56,7 +56,7 @@ buttonNavMenu.addEventListener('click', () => {
 //     for (let elem of rowsThirdLevel) {
 //       elem.classList.toggle('item__row--hidden');
 //     }
-//     elem.classList.toggle('item__button--collapsList');
+//     elem.classList.add('item__button--collapsList');
 //   });
 // }
 
@@ -73,7 +73,6 @@ for (let buttonFirstLevel of buttonsFirstLevel) {
       buttonFirstLevel.classList.remove("item__button--collapsList");
     } else {
       buttonFirstLevel.classList.add("item__button--collapsList");
-
     }
 
     // if (!buttonFirstLevel.classList.contains("item__button--collapsList")) {

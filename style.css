@@ -189,6 +189,7 @@ a {
   width: 290px;
   background-color: var(--white);
   margin-bottom: 30px;
+  align-self: start;
   /*потом margin удалить */
 }
 
