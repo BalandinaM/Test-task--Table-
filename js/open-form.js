@@ -8,8 +8,8 @@ buttonCreateLocation.addEventListener('click', () => {
   const buttonFormCreateLocation = formCreateLocation.querySelector('.form-createLocation__buttonCreate');
   const buttonResetForm = formCreateLocation.querySelector('.form-createLocation__buttonReset');
 
-  buttonFormCreateLocation.addEventListener('click', (event) => {
-    event.preventDefault();
+  buttonFormCreateLocation.addEventListener('click', (e) => {
+    e.preventDefault();
     formCreateLocation.remove();
   });
 
@@ -21,8 +21,6 @@ buttonCreateLocation.addEventListener('click', () => {
 const formChangeLocationTemplate = document.querySelector('#changeLocation').content.querySelector('.wrap-formEditionLocations');
 const formChangeLocation = formChangeLocationTemplate.cloneNode(true);
 const buttonsChangeLocation = document.querySelectorAll('.editionTools__button--edition');
-console.log(buttonsChangeLocation);
-
 
 for (let button of buttonsChangeLocation) {
   button.addEventListener("click", (e) => {
@@ -31,8 +29,8 @@ for (let button of buttonsChangeLocation) {
     const buttonSaveLocation = formChangeLocation.querySelector('.form-changeLocation__buttonSave');
     const buttonResetForm = formChangeLocation.querySelector('.form-changeLocation__buttonReset');
 
-    buttonSaveLocation.addEventListener('click', (event) => {
-      event.preventDefault();
+    buttonSaveLocation.addEventListener('click', (e) => {
+      e.preventDefault();
       formChangeLocation.remove();
     });
 

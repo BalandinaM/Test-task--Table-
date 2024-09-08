@@ -102,7 +102,6 @@ buttonSettings.addEventListener('click', (e) => {
 
 
 const listAreaSettings = headerSettings.querySelectorAll('.nav-list__link');
-console.log(listAreaSettings);
 
 const removeClass = () => {
   listAreaSettings.forEach((elem) => {
@@ -146,7 +145,6 @@ const createRowTable = () => {
 };
 
 const arrRowsTable = createRowTable();
-//console.log(arrRowsTable);
 
 const showSetiingsLocations = () => {
   const settingsLocationsTemplate = document.querySelector('#settingsLocations').content.querySelector('.settingFieldsTable');
@@ -167,13 +165,11 @@ const showSetiingsLocations = () => {
 
 
 listAreaSettings.forEach((elem) => {
-  //console.log(elem.id);
   elem.addEventListener('click', (e) => {
     e.preventDefault();
     clearWorkSpace();
     removeClass();
 
-    //e.stopPropagation();
     elem.classList.add('nav-list__link--current');
     if (elem.id == 'settingProperty') {
       // console.log('settingProperty')

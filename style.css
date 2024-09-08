@@ -549,7 +549,8 @@ a {
 
 /* формы создания и изменения локации */
 
-.wrap-formEditionLocations {
+.wrap-formEditionLocations,
+.wrap-greetings {
   position: fixed;
   top: 0;
   left: 0;
@@ -886,4 +887,28 @@ tbody tr:nth-child(odd) {
 
 .settings__button--create {
   width: 210px;
+}
+
+/* greetings */
+
+.index__greetings {
+  width: 1000px;
+  height: 600px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-color: var(--white);
+  padding: 40px;
+  text-align: center;
+}
+.greetings__button {
+  margin-top: 30px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  color: var(--white);
+  background-color: var(--black);
 }

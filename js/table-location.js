@@ -1,5 +1,6 @@
 const dataBase = [
   {
+    id: 1,
     title: "Локация 1",
     info1: "512",
     location1_1: {
@@ -49,6 +50,7 @@ const dataBase = [
     },
   },
   {
+    id: 2,
     title: "Локация 2",
     info1: "215",
     location1_1: {
@@ -72,6 +74,7 @@ const dataBase = [
     },
   },
   {
+    id: 3,
     title: "Локация 3",
     info1: "320",
     location1_1: {
@@ -95,6 +98,7 @@ const dataBase = [
     },
   },
   {
+    id: 4,
     title: "Локация 4",
     info1: "6975",
     location1_1: {
@@ -119,6 +123,8 @@ const dataBase = [
   },
 ];
 
+//Заполнение таблицы Локации
+
 const table = document.querySelector('.location__list');
 const levelOneTemplate = document.querySelector('#level1').content.querySelector('.location__item');
 const levelOne = levelOneTemplate.cloneNode(true);
@@ -140,6 +146,7 @@ const createRowTable = (elem) => {
     .content.querySelector(".location__item");
   const levelOne = levelOneTemplate.cloneNode(true);
 
+  levelOne.dataset.id = elem.id;
   levelOne
     .querySelector(".item__level1")
     .querySelector(".item__titleRow").textContent = elem.title;
@@ -223,4 +230,48 @@ dataBase.forEach(element => {
 
 rowsTable.forEach(elem => {
   table.appendChild(elem);
-})
+});
+
+//Интерактивность таблицы
+
+const arrLocations = document.querySelectorAll('.location__item');
+
+arrLocations.forEach((elem) => {
+  const buttonFirstLevel = elem.querySelector(".level1__button");
+  buttonFirstLevel.addEventListener("click", () => {
+    console.log(elem.dataset.id);
+    buttonFirstLevel.classList.toggle("item__button--collapsList");
+
+    let editionTools = elem.querySelector(".item__editionTools");
+    editionTools.classList.toggle("item__editionTools--hidden");
+
+    let itemsSecondLevel = elem.querySelectorAll(".item__level2");
+
+    itemsSecondLevel.forEach((elem) => {
+      elem.classList.toggle("item__row--hidden");
+
+      let buttonSecondLevel = elem.querySelector(".level2__button");
+
+      buttonSecondLevel.addEventListener("click", () => {
+        buttonSecondLevel.classList.toggle("item__button--collapsList");
+
+        let itemThirdLevel = elem.querySelector(".item__level3");
+        itemThirdLevel.classList.toggle("item__row--hidden");
+      });
+    });
+
+    if (!buttonFirstLevel.classList.contains("item__button--collapsList")) {
+      editionTools.classList.add("item__editionTools--hidden");
+
+      itemsSecondLevel.forEach((elem) => {
+        elem.classList.add("item__row--hidden");
+
+        let buttonSecondLevel = elem.querySelector(".level2__button");
+        buttonSecondLevel.classList.remove("item__button--collapsList");
+
+        let itemThirdLevel = elem.querySelector(".item__level3");
+        itemThirdLevel.classList.add("item__row--hidden");
+      });
+    }
+  });
+});
